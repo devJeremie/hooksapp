@@ -11,10 +11,10 @@ class ClassState extends Component {
         }
     }
 
-     addOne = () => {
+    addOne = () => {
         this.setState(prevState => {
             return {
-            counter: this.state.counter + 1
+            counter: prevState.counter + 1
             }
         })
     }
@@ -23,7 +23,7 @@ class ClassState extends Component {
         return (
             <div>
                 <p>ClassState : {this.state.counter}</p>
-                <button onClick={this.addOne}>State dans la Class</button>
+                <button className="btn btn-primary" onClick={this.addOne}>State dans la Class</button>
             </div>
           )
     }

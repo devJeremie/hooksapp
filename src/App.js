@@ -1,16 +1,19 @@
 import './App.css';
-import ClassState from './components/ClassState';
-import FunctionState from './components/FunctionState';
+
+//import library 
+import { v4 as uuidv4 } from 'uuid'; 
+import Todo from './components/Todo';
+
+//import Component
+
 
 function App() {
   return (
     <div className="App">
-      <h1 className='text-center'>Les Hooks de React</h1>
+      <h1 className='text-center'>ToDo List </h1>
 
-    <ClassState />
-    <FunctionState />
-
-
+    <Todo />
+    <hr />
     </div>
   );
 }
