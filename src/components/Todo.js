@@ -13,7 +13,6 @@ const Todo = () => {
         {id: 4, todo: 'Ne pas faire mon Kévin'}
     ])
 
-    const [id, setId] = useState(uuidv4());
 
     const myTodos = todos.map(todo => {
         return ( <li className='list-group-item' key={todo.id}>{todo.todo} </li>
@@ -21,14 +20,22 @@ const Todo = () => {
     })
 
     const addNewTodo = (newTodo) => {
-        setTodos([...todos, {
-            id: {id},
-            todo: newTodo
-        }])
-    }
-        
+        const newid = uuidv4();
+        if(newTodo !== '') {
+
+            warning && setWarning(false)
+
+            setTodos([...todos, {
+                id: newid,
+                todo: newTodo
+            }])
+            console.log(newid)
+        } else {
+            setWarning(true);
+        }
+    }    
   
-    const warningMesg = warning && <div className='alert alert-danger' role='alert'>Veulliez indiquer un Todo</div>
+    const warningMesg = warning && <div className='alert alert-danger' role='alert'>Veuillez indiquer un Todo</div>
 
   return (
     <div>

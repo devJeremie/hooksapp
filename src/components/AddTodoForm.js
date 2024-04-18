@@ -7,6 +7,8 @@ const AddTodoForm = ({addNewTodo}) => {
     const handleTodo = (e) => {
         e.preventDefault()
         addNewTodo(addTodo);
+        setAddTodo("")  
+        // e.target.reset() // si jamais dans l'input on a enleve value={addTodo} par contre si on renvoie il renverra le dernier state
     }
     
     return (

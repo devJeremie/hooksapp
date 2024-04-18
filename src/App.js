@@ -1,10 +1,11 @@
 import './App.css';
 
 //import library 
-import Todo from './components/Todo';
-
 
 //import Component
+import ClassCount from './components/ClassCount';
+import FunctionCount from './components/FunctionCount';
+
 
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
     <div className="container">
       <h1 className='text-center'>ToDo List </h1>
 
-    <Todo />
-   
+      <ClassCount />
+      <FunctionCount />
+    
     <hr />
     </div>
   );
