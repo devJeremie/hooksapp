@@ -2,18 +2,24 @@ import React,{useState, useEffect} from 'react'
 
 function FunctionCount() {
     const [count, setCount] = useState(0)
+    const [name, setName] = useState("")
 
+    // useEffect(() => {
+
+    //     setTimeout(() => {
+    //       console.log(`Mise à jour du state via useEffect`); 
+    //         document.title = `Vous avez cliqué ${count} fois`
+    //     }, 3000,[count])
+    // })
     useEffect(() => {
-
-        setTimeout(() => {
-            document.title = `Vous avez cliqué ${count} fois`
-        }, 3000)
-           
-    })
+      console.log(`Mise à jour du state via useEffect`)
+      document.title = `Vous avez cliqué ${count} fois`
+    },[])
 
   return (
     <div>
         <h1>{count}</h1>
+        <input type='text' value={name} onChange={e=>setName(e.target.value)}/>
         <button className='btn btn-primary' onClick={() => setCount(count + 1)}>Ajouter</button>
     </div>
   )
