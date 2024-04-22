@@ -1,26 +1,28 @@
+import React, { Component } from 'react'
+import Profile from './components/Profile'
+import {UserContext, ColorContext} from './components/MyContext'
+
 import './App.css';
 
-//import library 
+class App extends Component {
 
-//import Component
-import ClassCount from './components/ClassCount';
-import FunctionCount from './components/FunctionCount';
+  state = {
+    user: {
+      name: 'Lisa',
+      age: 8
+    }
+  }
 
-
-function App() {
-
-  
-
-  return (
-    <div className="container">
-      <h1 className='text-center'>ToDo List </h1>
-
-      <ClassCount />
-      <FunctionCount />
-    
-    <hr />
-    </div>
-  );
+  render() {
+    return (
+      <UserContext.Provider value={this.state.user}>
+        <ColorContext.Provider value={'purple'}>
+          <Profile />
+        </ColorContext.Provider>
+      </UserContext.Provider>
+      
+    );
+  }
 }
 
-export default App;
+export default App

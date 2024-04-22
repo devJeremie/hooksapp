@@ -1,5 +1,5 @@
 import React from 'react'
-import {UserContext, ColorContext} from './components/MyContext'
+import {UserContext, ColorContext} from './MyContext'
 
 const ContentData =() =>{
   return (
@@ -13,8 +13,8 @@ const ContentData =() =>{
                                 return (
                                     <div style={{color:color}}>
                                         <ul>
-                                            <li>Nom: {user.name}</li>
-                                            <li>Age: {user.age}</li>
+                                            <li className='text-center'>Nom: {user.name}</li>
+                                            <li className='text-center'>Age: {user.age}</li>
                                         </ul>
                                     </div>
                                 )

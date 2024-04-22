@@ -14,7 +14,7 @@ function FunctionCount() {
     useEffect(() => {
       console.log(`Mise à jour du state via useEffect`)
       document.title = `Vous avez cliqué ${count} fois`
-    },[])
+    },[count])
 
   return (
     <div>
