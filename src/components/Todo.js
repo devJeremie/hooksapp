@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {v4 as uuidv4} from  "uuid";
 import AddTodoForm from './AddTodoForm';
 
@@ -10,7 +10,7 @@ const Todo = () => {
         {id: 1, todo: 'Acheter du lait'},
         {id: 2, todo: 'Acheter du pain'},
         {id: 3, todo: 'Acheter du fromage'},
-        {id: 4, todo: 'Ne pas faire mon Kévin'}
+        {id: 4, todo: 'Faire mon Maxime'}
     ])
 
 

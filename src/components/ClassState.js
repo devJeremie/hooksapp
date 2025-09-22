@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 
 class ClassState extends Component {
@@ -6,6 +6,7 @@ class ClassState extends Component {
     constructor(props) {
         super(props)
     
+        
         this.state = {
             counter: 0
         }
