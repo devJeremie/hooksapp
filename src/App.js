@@ -11,6 +11,7 @@ import Button from './components/Button';
 import Todo from './components/Todo';
 import FunctionCount from './components/FunctionCount';
 // import ClassCount from './components/ClassCount';
+import TestUseEffect from './components/TestUseEffect';
 
 function App() {
 
@@ -35,9 +36,10 @@ function App() {
         <h1 className='text-center'> Les Hooks</h1>
         {/* <ClassState />
         <FunctionState /> */}
-        <Todo />
-        {/* <ClassCount /> */}
-        <FunctionCount />
+        {/*<Todo />
+         <ClassCount /> 
+        <FunctionCount />*/}
+        <TestUseEffect />
         <Count text='CountOne' count={countOne.value} bgColor={countOne.btnColor} />
         <Count text='CountTwo'count={countTwo.value} bgColor={countTwo.btnColor}/>
         <Button handleClick={incrementCountOne} btnColor={countOne.btnColor} increment={countOne.increment}>Count 1</Button>
