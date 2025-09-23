@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 import {UserContext, ColorContext} from './MyContext'
 
 const ContentData =() =>{
 
-    // const user = useContext(UserContext);
-    // const color = useContext(ColorContext);//page 18 du cours
+    const user = useContext(UserContext);
+    const color = useContext(ColorContext);//page 18 du cours
 
   return (
     <UserContext.Consumer>
