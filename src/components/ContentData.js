@@ -4,7 +4,7 @@ import {UserContext, ColorContext} from './MyContext'
 const ContentData =() =>{
 
     const user = useContext(UserContext);
-    const color = useContext(ColorContext);//page 18 du cours
+    const color = useContext(ColorContext);
 
   return (
     <UserContext.Consumer>
