@@ -15,7 +15,7 @@ const reducer = (state, action) => { //initialise le reducer qui va gérer les a
     }
 }
 
-function Count ()  {
+function CountReducer ()  {
 
 const [count, dispatch] = useReducer (reducer, initialState)  // Utiliser le hook useReducer pour créer un état et une fonction de distribution 
 
@@ -30,4 +30,4 @@ const [count, dispatch] = useReducer (reducer, initialState)  // Utiliser le hoo
   )
 }
 
-export default Count
+export default CountReducer
