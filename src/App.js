@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import Count from './components/Count';
 import Button from './components/Button';
+//import du router
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 //import des pages
 import Home from './pages/Home';
@@ -25,7 +26,7 @@ import PrivateRoute from './components/PrivateRoute';
 
 function App() {
 
-  const [isAdmin, setIsAdmin] = useState(true); // ou false pour non-admin
+  const [isAdmin, setIsAdmin] = useState(false); // ou false pour non-admin
 
   const [countOne, setCountOne] = useState({value: 0, btnColor :'success',increment: 25 })
   const [countTwo, setCountTwo] = useState({value: 0, btnColor :'danger',increment: 20 })
@@ -43,6 +44,7 @@ function App() {
 
     return (
       <Router>
+
         <nav>
           <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/profile">Profile</Link>
         </nav>
