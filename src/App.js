@@ -60,7 +60,7 @@ function App() {
               </PrivateRoute>
             } />
         </Routes>
-      </Router>
+      </Router> 
   // <div className='text-center'>
   //        <h1 className='text-center'> Les Hooks</h1>
   //        {/* <ClassState />
