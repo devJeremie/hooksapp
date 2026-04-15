@@ -7,13 +7,15 @@ import './App.css';
 import Count from './components/Count';
 import Button from './components/Button';
 //import du router
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import des pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';
 //import de la protection de routes
 import PrivateRoute from './components/PrivateRoute';
+//import de la navbar
+import Navbar from './components/Navbar';
 
 // import CountReducer from './components/CountReducer';
 // import ClassState from './components/ClassState';
@@ -46,9 +48,7 @@ function App() {
     return (
       <Router>
 
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/profile">Profile</Link>
-        </nav>
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<Home />} />
