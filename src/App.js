@@ -44,7 +44,6 @@ function App() {
     age: 8,
   });
 
-
     return (
       <Router>
 
