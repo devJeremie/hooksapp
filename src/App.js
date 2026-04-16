@@ -40,6 +40,7 @@ function App() {
   const incrementCountTwo = (val) => {
     countTwo.value < 100 && setCountTwo({...countTwo,value: countTwo.value + val })
   }
+  
   const [user, setUser] = useState({
     name: 'Lisa',
     age: 8,
