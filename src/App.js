@@ -17,7 +17,8 @@ import PrivateRoute from './components/PrivateRoute';
 //import de la navbar
 import Navbar from './components/Navbar';
 
-// import CountReducer from './components/CountReducer';
+// import du composant CountReducer qui utilise le hook useReducer pour gérer un compteur
+import CountReducer from './components/CountReducer';
 // import ClassState from './components/ClassState';
 // import FunctionState from './components/FunctionState';
 // import Todo from './components/Todo';
@@ -47,6 +48,8 @@ function App() {
     return (
       <Router>
         <Navbar />
+        {/* Affichage du composant CountReducer — géré par useReducer (increment / decrement / réinitialiser) */}
+        <CountReducer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -68,7 +71,7 @@ function App() {
   //         {/* <ClassCount />  */}
   //        {/* <FunctionCount /> */}
   //        {/* <TestUseEffect /> */}
-  //       {/* <CountReducer /> */}
+        //  <CountReducer /> 
   //       <Count text='CountOne' count={countOne.value} bgColor={countOne.btnColor} />
   //       <Count text='CountTwo'count={countTwo.value} bgColor={countTwo.btnColor}/>
   //       <Button handleClick={incrementCountOne} btnColor={countOne.btnColor} increment={countOne.increment}>Count 1</Button>

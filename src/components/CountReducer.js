@@ -1,31 +1,39 @@
 import React, {useReducer} from 'react'
 
-const initialState = 0; //etat initial du state
+// L'état initial du compteur — ici un simple nombre, pas un objet
+const initialState = 0;
 
-const reducer = (state, action) => { //initialise le reducer qui va gérer les actions sur notre state
+// Le reducer est une fonction pure qui reçoit l'état actuel et une action
+// Il retourne TOUJOURS un nouvel état sans jamais modifier le state directement
+const reducer = (state, action) => {
     switch(action) {
         case 'increment':
-            return state+1
+            return state + 1          // on retourne un nouvel état incrémenté de 1
         case 'decrement':
-            return state-1
+            return state - 1          // on retourne un nouvel état décrémenté de 1
         case 'réinitialiser':
-            return initialState
-            default:
-                return state
+            return initialState       // on remet le compteur à sa valeur de départ (0)
+        default:
+            return state              // si l'action est inconnue, on retourne l'état sans modification
     }
 }
 
 function CountReducer ()  {
 
-const [count, dispatch] = useReducer (reducer, initialState)  // Utiliser le hook useReducer pour créer un état et une fonction de distribution 
+  // useReducer retourne deux éléments :
+  // - count  : la valeur actuelle du state (remplace useState)
+  // - dispatch : la fonction qui envoie une action au reducer pour mettre à jour le state
+  const [count, dispatch] = useReducer(reducer, initialState)
 
   return (
     <div>
-      <h1>{count} </h1>
+      {/* Affichage de la valeur actuelle du state */}
+      <h1>{count}</h1>
+
+      {/* Chaque bouton appelle dispatch() avec le nom de l'action correspondante */}
       <button className='btn btn-success m-3' onClick={() => dispatch('increment')}>+</button>
       <button className='btn btn-info m-3' onClick={() => dispatch('réinitialiser')}>*</button>
       <button className='btn btn-danger m-3' onClick={() => dispatch('decrement')}>-</button>
-      
     </div>
   )
 }
