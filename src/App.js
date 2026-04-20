@@ -51,6 +51,16 @@ function App() {
         <Navbar />
         {/* Affichage du composant CountReducer — géré par useReducer (increment / decrement / réinitialiser) */}
         <CountReducer />
+
+        {/* Barres de progression — state géré par useState dans App */}
+        <div className='text-center'>
+          <Count count={countOne.value} bgColor={countOne.btnColor} />
+          <Button handleClick={incrementCountOne} btnColor={countOne.btnColor} increment={countOne.increment}>Count 1</Button>
+
+          <Count count={countTwo.value} bgColor={countTwo.btnColor} />
+          <Button handleClick={incrementCountTwo} btnColor={countTwo.btnColor} increment={countTwo.increment}>Count 2</Button>
+        </div>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
