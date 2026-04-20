@@ -1,4 +1,4 @@
-
+// import React from "react"
 function Count({count, bgColor}) {
 
     const progress = {width: `${count}%`}
@@ -15,5 +15,6 @@ function Count({count, bgColor}) {
     </div>
   )
 }
+export default Count;
 
-export default Count
+// export default React.memo(Count)
