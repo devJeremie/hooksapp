@@ -32,6 +32,14 @@ function Navbar() {
               Profile
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/login"
+              className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}
+            >
+              Login
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
